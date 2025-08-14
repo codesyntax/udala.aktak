@@ -1,5 +1,8 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
   <!-- -*- extra stuff goes here -*- -->
-
+  <utility
+      name="udala.aktak.BilkuraMotak"
+      component=".bilkura_motak.BilkuraMotakFactory"
+      />
 </configure>

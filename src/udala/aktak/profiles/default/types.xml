@@ -7,4 +7,7 @@
           name="MyType"
   />
 -->
+  <object name="Bilkura" meta_type="Dexterity FTI"/>
+  <object name="Folder" meta_type="Dexterity FTI"/>
+
 </object>

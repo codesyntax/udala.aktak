@@ -12,3 +12,6 @@ PACKAGE_NAME = "udala.aktak"
 _ = MessageFactory(PACKAGE_NAME)
 
 logger = logging.getLogger(PACKAGE_NAME)
+
+OHIKOA = "1"
+EZ_OHIKOA = "2"

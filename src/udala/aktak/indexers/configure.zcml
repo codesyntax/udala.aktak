@@ -3,5 +3,6 @@
   <!-- Indexers/Metadata -->
 
   <!-- -*- extra stuff goes here -*- -->
+  <include file="bilkura_data.zcml" />
 
 </configure>

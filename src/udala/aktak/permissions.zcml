@@ -6,4 +6,9 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <permission
+      id="udala.aktak.AddBilkura"
+      title="udala.aktak: Add Bilkura"
+      />
+
 </configure>

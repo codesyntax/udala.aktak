@@ -1,0 +1,156 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.aktak"
+>
+
+  <body>
+
+    <metal:content-core fill-slot="content-core">
+      <metal:block define-macro="content-core">
+
+        <tal:contents tal:define="
+                        folders view/folders;
+                      ">
+
+          <div class="plone-javascripts">
+            <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+              var folderChangeElement = document.getElementById('folder-change');
+              folderChangeElement.addEventListener('change', function () {
+                var visibleTables = document.querySelectorAll('.table-responsive');
+                visibleTables.forEach(function (table) {
+                  table.style.display = 'none';
+                });
+
+                var showfolder = folderChangeElement.value;
+                var folderToShow = document.getElementById(showfolder);
+                if (folderToShow) {
+                  folderToShow.style.display = 'block';
+                }
+              });
+            });
+            </script>
+          </div>
+          <select class="mb-3 w-25"
+                  id="folder-change"
+          >
+            <option tal:repeat="folder folders"
+                    tal:content="folder/title"
+                    tal:attributes="
+                      value folder/id;
+                    "
+            >
+            </option>
+          </select>
+
+          <tal:repeat tal:repeat="folder view/folders">
+            <div class="table-responsive"
+                 tal:attributes="
+                   id folder/id;
+                   style python:repeat['folder'].index==0 and 'display:block' or 'display:none';
+                 "
+            >
+
+              <table class="listing table"
+                     id="bilkurak"
+              >
+                <thead>
+                  <tr>
+                    <th i18n:translate="">Data</th>
+                    <th i18n:translate="">Mota</th>
+                    <th i18n:translate="">Gai-zerrenda</th>
+                    <th i18n:translate="">Akta</th>
+                    <th i18n:translate="">Eranskinak</th>
+                    <th i18n:translate="">Bideoa</th>
+                    <th i18n:translate="">Bideo-akta</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr tal:repeat="item folder/bilkurak">
+
+                    <td tal:content="item/data">
+                    2022/04/04 19:00
+                    </td>
+                    <td tal:content="item/mota">Ohikoa</td>
+                    <td>
+                      <tal:block tal:condition="item/gaizerrenda">
+                        <a href=""
+                           tal:attributes="
+                             href item/gaizerrenda;
+                           "
+                           i18n:translate=""
+                        >
+                        Deskargatu
+                        </a>
+                      </tal:block>
+                    </td>
+                    <td>
+                      <tal:block tal:condition="item/akta">
+                        <a href=""
+                           tal:attributes="
+                             href item/akta;
+                           "
+                           i18n:translate=""
+                        >
+                        Deskargatu
+                        </a>
+                      </tal:block>
+                    </td>
+                    <td>
+                      <tal:block tal:condition="item/eranskinak">
+                        <a href=""
+                           tal:attributes="
+                             href item/eranskinak;
+                           "
+                           i18n:translate=""
+                        >
+                        Deskargatu
+                        </a>
+                      </tal:block>
+                    </td>
+                    <td>
+                      <a class="bideoa"
+                         href=""
+                         tal:condition="item/bideoa"
+                         tal:attributes="
+                           href item/bideoa;
+                         "
+                         i18n:translate=""
+                      >
+                      Ikusi bideoa
+                      </a>
+                    </td>
+                    <td>
+                      <a class="bideoa bideoakta"
+                         href=""
+                         tal:condition="item/bideoakta"
+                         tal:attributes="
+                           href item/bideoakta;
+                         "
+                         i18n:translate=""
+                      >
+                      Ikusi bideoa
+                      </a>
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </tal:repeat>
+          <p tal:condition="not:folders"
+             i18n:translate=""
+          >
+          Ez dago bilkuren daturik
+          </p>
+        </tal:contents>
+
+      </metal:block>
+    </metal:content-core>
+  </body>
+
+</html>

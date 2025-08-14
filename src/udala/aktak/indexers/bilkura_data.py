@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+
+from plone.dexterity.interfaces import IDexterityContent
+from plone.indexer import indexer
+from udala.aktak.content.bilkura import IBilkura
+
+
+@indexer(IDexterityContent)
+def dummy(obj):
+    """Dummy to prevent indexing other objects thru acquisition"""
+    raise AttributeError("This field should not indexed here!")
+
+
+@indexer(IBilkura)  # ADJUST THIS!
+def bilkura_data(obj):
+    """Calculate and return the value for the indexer"""
+    return obj.data

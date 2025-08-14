@@ -1,0 +1,13 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter
+      factory=".bilkura_data.dummy"
+      name="bilkura_data"
+      />
+
+  <adapter
+      factory=".bilkura_data.bilkura_data"
+      name="bilkura_data"
+      />
+
+</configure>

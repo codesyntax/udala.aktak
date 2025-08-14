@@ -1,0 +1,60 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="udala.aktak"
+    >
+
+  <browser:page
+      name="view"
+      for="udala.aktak.content.bilkura.IBilkura"
+      class=".bilkura_view.BilkuraView"
+      template="bilkura_view.pt"
+      permission="zope2.View"
+      layer="udala.aktak.interfaces.IBrowserLayer"
+      />
+
+  <browser:page
+      name="bilkurak-filter-view"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class=".bilkurak_view.BilkurakView"
+      template="bilkurak_filter_view.pt"
+      permission="zope2.View"
+      layer="udala.aktak.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Bilkuren zerrenda (filtroak eta datu osoak)"
+      />
+
+  <browser:page
+      name="bilkurak-aktak-bakarrik-filter-view"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class=".bilkurak_view.BilkurakView"
+      template="bilkurak_aktak_bakarrik_filter_view.pt"
+      permission="zope2.View"
+      layer="udala.aktak.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Bilkuren zerrenda (filtroak eta akta bakarrrik)"
+      />
+
+  <browser:page
+      name="bilkurak-view"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class=".bilkurak_view.BilkurakView"
+      template="bilkurak_view.pt"
+      permission="zope2.View"
+      layer="udala.aktak.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Bilkuren zerrenda (karpetakoak bakarrik, datu osoak)"
+      />
+
+  <browser:page
+      name="bilkurak-aktak-bakarrik-view"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class=".bilkurak_view.BilkurakView"
+      template="bilkurak_aktak_bakarrik_view.pt"
+      permission="zope2.View"
+      layer="udala.aktak.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Bilkuren zerrenda (karpetakoak bakarrik, akta bakarrik)"
+      />
+</configure>
