@@ -59,10 +59,10 @@
               >
                 <thead>
                   <tr>
-                    <th i18n:translate="">Data</th>
-                    <th i18n:translate="">Mota</th>
-                    <th i18n:translate="">Akta</th>
-                    <th i18n:translate="">Eranskinak</th>
+                    <th i18n:translate="">Date</th>
+                    <th i18n:translate="">Type</th>
+                    <th i18n:translate="">Meeting minutes</th>
+                    <th i18n:translate="">Annexes to the meeting minutes</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -71,7 +71,7 @@
                     <td tal:content="item/data">
                     2022/04/04 19:00
                     </td>
-                    <td tal:content="item/mota">Ohikoa</td>
+                    <td tal:content="item/mota">Ordinary</td>
                     <td>
                       <tal:block tal:condition="item/akta">
                         <a href=""
@@ -80,7 +80,7 @@
                            "
                            i18n:translate=""
                         >
-                        Deskargatu
+                        Download
                         </a>
                       </tal:block>
                     </td>
@@ -92,7 +92,7 @@
                            "
                            i18n:translate=""
                         >
-                        Deskargatu
+                        Download
                         </a>
                       </tal:block>
                     </td>
@@ -106,7 +106,7 @@
           <p tal:condition="not:folders"
              i18n:translate=""
           >
-          Ez dago bilkuren daturik
+          There is no data
           </p>
         </tal:contents>
 

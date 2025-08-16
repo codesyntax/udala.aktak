@@ -1,15 +1,9 @@
 # -*- coding: utf-8 -*-
-from udala.aktak.views.vocabutils import vocab_term_title
-
-# from plone.app.textfield import RichText
-# from plone.autoform import directives
-from udala.aktak import _
 from plone.dexterity.content import Container
 from plone.namedfile.field import NamedBlobFile
 from plone.supermodel import model
-
-# from plone.supermodel.directives import fieldset
-# from z3c.form.browser.radio import RadioFieldWidget
+from udala.aktak import _
+from udala.aktak.views.vocabutils import vocab_term_title
 from zope import schema
 from zope.interface import implementer
 
@@ -23,29 +17,33 @@ class IBilkura(model.Schema):
     # model.load('bilkura.xml')
 
     data = schema.Datetime(
-        title=_("Data"),
+        title=_("Date"),
         required=True,
     )
 
     mota = schema.Choice(
-        title=_("Mota"),
+        title=_("Type"),
         vocabulary="udala.aktak.BilkuraMotak",
         required=True,
     )
 
-    gaizerrenda = NamedBlobFile(title="Gai zerrendaren fitxategia", required=False)
+    gaizerrenda = NamedBlobFile(
+        title="File with the agenda of the meeting", required=False
+    )
 
-    akta = NamedBlobFile(title=_("Aktaren fitxategia"), required=False)
+    akta = NamedBlobFile(title=_("File with the meeting minutes"), required=False)
 
-    eranskinak = NamedBlobFile(title=_("Eranskinak"), required=False)
+    eranskinak = NamedBlobFile(
+        title=_("File with the annexes to the meeting minutes"), required=False
+    )
 
     bideoa = schema.TextLine(
-        title=_("Bideoaren helbidea"),
+        title=_("URL of the video"),
         required=False,
     )
 
     bideoakta = schema.TextLine(
-        title=_("Bideo-aktaren helbidea"),
+        title=_("URL of the meeting minutes video"),
         required=False,
     )
 

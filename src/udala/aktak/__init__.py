@@ -13,5 +13,5 @@ _ = MessageFactory(PACKAGE_NAME)
 
 logger = logging.getLogger(PACKAGE_NAME)
 
-OHIKOA = "1"
-EZ_OHIKOA = "2"
+ORDINARY = "1"
+EXTRAORDINARY = "2"

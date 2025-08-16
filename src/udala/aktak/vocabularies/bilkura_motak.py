@@ -9,7 +9,7 @@ from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
-from udala.aktak import OHIKOA, EZ_OHIKOA
+from udala.aktak import ORDINARY, EXTRAORDINARY
 
 
 class VocabItem(object):
@@ -26,8 +26,8 @@ class BilkuraMotak(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(OHIKOA, _("Ohikoa")),
-            VocabItem(EZ_OHIKOA, _("Ez ohikoa")),
+            VocabItem(ORDINARY, _("Ordinary")),
+            VocabItem(EXTRAORDINARY, _("Extraordinary")),
         ]
 
         if not IDexterityContent.providedBy(context):

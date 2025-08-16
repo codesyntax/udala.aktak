@@ -17,115 +17,115 @@ msgstr ""
 #: udala/aktak/views/bilkurak_filter_view.pt:64
 #: udala/aktak/views/bilkurak_view.pt:28
 msgid "Agenda"
-msgstr ""
+msgstr "Orden del día"
 
 #: udala/aktak/views/bilkurak_aktak_bakarrik_filter_view.pt:65
 #: udala/aktak/views/bilkurak_aktak_bakarrik_view.pt:29
 #: udala/aktak/views/bilkurak_filter_view.pt:66
 msgid "Annexes to the meeting minutes"
-msgstr ""
+msgstr "Anexos al acta"
 
 #: udala/aktak/content/bilkura.py:20
 #: udala/aktak/views/bilkurak_aktak_bakarrik_filter_view.pt:62
 #: udala/aktak/views/bilkurak_aktak_bakarrik_view.pt:26
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: udala/aktak/views/bilkurak_aktak_bakarrik_filter_view.pt:77
 #: udala/aktak/views/bilkurak_aktak_bakarrik_view.pt:41
 #: udala/aktak/views/bilkurak_filter_view.pt:80
 msgid "Download"
-msgstr ""
+msgstr "Descargar"
 
 #: udala/aktak/vocabularies/bilkura_motak.py:30
 msgid "Extraordinary"
-msgstr ""
+msgstr "Extraordinaria"
 
 #: udala/aktak/content/bilkura.py:37
 msgid "File with the annexes to the meeting minutes"
-msgstr ""
+msgstr "Archivo con los anexos al acta"
 
 #: udala/aktak/content/bilkura.py:34
 msgid "File with the meeting minutes"
-msgstr ""
+msgstr "Archivo con el acta"
 
 #: udala/aktak/profiles/default/types/Bilkura.xml
 msgid "Meeting"
-msgstr ""
+msgstr "Reunión"
 
 #: udala/aktak/views/configure.zcml:26
 msgid "Meeting listing (filters and complete data)"
-msgstr ""
+msgstr "Listado de reuniones (filtros y datos completos)"
 
 #: udala/aktak/views/configure.zcml:37
 msgid "Meeting listing (filters and minutes only)"
-msgstr ""
+msgstr "Listado de reuniones (filtros y solo acta)"
 
 #: udala/aktak/views/configure.zcml:59
 msgid "Meeting listing (only from this folder minutes only"
-msgstr ""
+msgstr "Listado de reuniones (solo de esta carpeta con datos completos)"
 
 #: udala/aktak/views/configure.zcml:48
 msgid "Meeting listing (only from this folder with complete data)"
-msgstr ""
+msgstr "Listado de reuniones (solo de esta carpeta y solo acta)"
 
 #: udala/aktak/views/bilkurak_aktak_bakarrik_filter_view.pt:64
 #: udala/aktak/views/bilkurak_aktak_bakarrik_view.pt:28
 #: udala/aktak/views/bilkurak_filter_view.pt:65
 msgid "Meeting minutes"
-msgstr ""
+msgstr "Acta"
 
 #: udala/aktak/vocabularies/bilkura_motak.py:29
 msgid "Ordinary"
-msgstr ""
+msgstr "Ordinaria"
 
 #: udala/aktak/profiles.zcml:13
 msgid "Package to configure a new udala.aktak site"
-msgstr ""
+msgstr "Paquete para configurar udala.aktak"
 
 #: udala/aktak/views/bilkurak_aktak_bakarrik_filter_view.pt:106
 #: udala/aktak/views/bilkurak_aktak_bakarrik_view.pt:68
 #: udala/aktak/views/bilkurak_filter_view.pt:145
 msgid "There is no data"
-msgstr ""
+msgstr "No hay datos"
 
 #: udala/aktak/content/bilkura.py:25
 #: udala/aktak/views/bilkurak_aktak_bakarrik_filter_view.pt:63
 #: udala/aktak/views/bilkurak_aktak_bakarrik_view.pt:27
 msgid "Type"
-msgstr ""
+msgstr "Sesión"
 
 #: udala/aktak/content/bilkura.py:46
 msgid "URL of the meeting minutes video"
-msgstr ""
+msgstr "Dirección web de la video-acta de la reunión"
 
 #: udala/aktak/content/bilkura.py:41
 msgid "URL of the video"
-msgstr ""
+msgstr "Dirección web del video"
 
 #: udala/aktak/profiles.zcml:21
 msgid "Uninstall udala.aktak setup."
-msgstr ""
+msgstr "Desinstalar udala.aktak"
 
 #: udala/aktak/views/bilkurak_filter_view.pt:67
 #: udala/aktak/views/bilkurak_view.pt:31
 msgid "Video"
-msgstr ""
+msgstr "Vídeo"
 
 #: udala/aktak/views/bilkurak_filter_view.pt:68
 #: udala/aktak/views/bilkurak_view.pt:32
 msgid "Video-minutes"
-msgstr ""
+msgstr "Vídeo-acta"
 
 #: udala/aktak/views/bilkurak_filter_view.pt:115
 #: udala/aktak/views/bilkurak_view.pt:79
 msgid "View video"
-msgstr ""
+msgstr "Ver vídeo"
 
 #: udala/aktak/profiles.zcml:13
 msgid "udala.aktak: Install"
-msgstr ""
+msgstr "udala.aktak: instalar"
 
 #: udala/aktak/profiles.zcml:21
 msgid "udala.aktak: Uninstall"
-msgstr ""
+msgstr "udala.aktak: desinstalar"

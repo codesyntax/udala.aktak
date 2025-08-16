@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from Acquisition import aq_inner
-from udala.aktak.views.vocabutils import vocab_term_title
 from plone.memoize.view import memoize
 from Products.Five.browser import BrowserView
 from zope.interface import implementer

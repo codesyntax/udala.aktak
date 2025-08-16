@@ -7,7 +7,7 @@
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">Bilkura</property>
+      name="title">Meeting</property>
   <property
       i18n:translate=""
       name="description"></property>

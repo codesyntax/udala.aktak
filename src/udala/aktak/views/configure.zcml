@@ -22,7 +22,7 @@
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
-      title="Bilkuren zerrenda (filtroak eta datu osoak)"
+      title="Meeting listing (filters and complete data)"
       />
 
   <browser:page
@@ -33,7 +33,7 @@
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
-      title="Bilkuren zerrenda (filtroak eta akta bakarrrik)"
+      title="Meeting listing (filters and minutes only)"
       />
 
   <browser:page
@@ -44,7 +44,7 @@
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
-      title="Bilkuren zerrenda (karpetakoak bakarrik, datu osoak)"
+      title="Meeting listing (only from this folder with complete data)"
       />
 
   <browser:page
@@ -55,6 +55,6 @@
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
-      title="Bilkuren zerrenda (karpetakoak bakarrik, akta bakarrik)"
+      title="Meeting listing (only from this folder minutes only"
       />
 </configure>
