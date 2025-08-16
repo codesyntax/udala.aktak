@@ -8,8 +8,8 @@
   <browser:page
       name="view"
       for="udala.aktak.content.bilkura.IBilkura"
-      class=".bilkura_view.BilkuraView"
-      template="bilkura_view.pt"
+      class=".meeting_view.MeetingView"
+      template="meeting_view.pt"
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       />
@@ -17,8 +17,8 @@
   <browser:page
       name="bilkurak-filter-view"
       for="plone.app.contenttypes.interfaces.IFolder"
-      class=".bilkurak_view.BilkurakView"
-      template="bilkurak_filter_view.pt"
+      class=".meetings_view.MeetingsView"
+      template="meetings_filters_view.pt"
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
@@ -28,8 +28,8 @@
   <browser:page
       name="bilkurak-aktak-bakarrik-filter-view"
       for="plone.app.contenttypes.interfaces.IFolder"
-      class=".bilkurak_view.BilkurakView"
-      template="bilkurak_aktak_bakarrik_filter_view.pt"
+      class=".meetings_view.MeetingsView"
+      template="meetings_filters_only_minutes_view.pt"
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
@@ -39,8 +39,8 @@
   <browser:page
       name="bilkurak-view"
       for="plone.app.contenttypes.interfaces.IFolder"
-      class=".bilkurak_view.BilkurakView"
-      template="bilkurak_view.pt"
+      class=".meetings_view.MeetingsView"
+      template="meetings_view.pt"
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
@@ -50,8 +50,8 @@
   <browser:page
       name="bilkurak-aktak-bakarrik-view"
       for="plone.app.contenttypes.interfaces.IFolder"
-      class=".bilkurak_view.BilkurakView"
-      template="bilkurak_aktak_bakarrik_view.pt"
+      class=".meetings_view.MeetingsView"
+      template="meetings_only_minutes_view.pt"
       permission="zope2.View"
       layer="udala.aktak.interfaces.IBrowserLayer"
       menu="plone_displayviews"

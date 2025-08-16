@@ -1,0 +1,84 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.aktak"
+>
+
+  <body>
+
+    <metal:content-core fill-slot="content-core">
+      <metal:block define-macro="content-core">
+
+        <tal:contents tal:define="
+                        items context/@@contentlisting;
+                        toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                      ">
+          <div class="table-responsive"
+               tal:condition="items"
+          >
+
+            <table class="listing table"
+                   id="meetings"
+            >
+              <thead>
+                <tr>
+                  <th i18n:translate="">Date</th>
+                  <th i18n:translate="">Type</th>
+                  <th i18n:translate="">Meeting minutes</th>
+                  <th i18n:translate="">Annexes to the meeting minutes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr tal:repeat="brain items">
+                  <tal:item define="
+                              item python:brain.getObject();
+                              item_url item/absolute_url;
+                            ">
+                    <td tal:content="python:toLocalizedTime(item.data)">
+                      2022/04/04 19:00
+                    </td>
+                    <td tal:content="item/get_session_title">Ordinary</td>
+                    <td>
+                      <tal:block tal:condition="item/akta">
+                        <a href=""
+                           tal:attributes="
+                             href string:${item_url}/@@download/akta;
+                           "
+                           i18n:translate=""
+                        >
+                        Download
+                        </a>
+                      </tal:block>
+                    </td>
+                    <td>
+                      <tal:block tal:condition="item/eranskinak">
+                        <a href=""
+                           tal:attributes="
+                             href string:${item_url}/@@download/eranskinak;
+                           "
+                           i18n:translate=""
+                        >
+                        Download
+                        </a>
+                      </tal:block>
+                    </td>
+                  </tal:item>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <p tal:condition="not:items"
+             i18n:translate=""
+          >
+          There is no data
+          </p>
+        </tal:contents>
+
+      </metal:block>
+    </metal:content-core>
+  </body>
+
+</html>

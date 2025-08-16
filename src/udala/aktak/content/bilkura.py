@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from plone.dexterity.content import Container
 from plone.namedfile.field import NamedBlobFile
 from plone.supermodel import model
@@ -52,9 +51,9 @@ class IBilkura(model.Schema):
 class Bilkura(Container):
     """Content-type class for IBilkura"""
 
-    def get_mota_title(self):
+    def get_session_title(self):
         return vocab_term_title(
             self,
-            "udala.aktak.BilkuraMotak",
+            "udala.aktak.SessionTypes",
             self.mota,
         )

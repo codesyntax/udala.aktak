@@ -1,25 +1,23 @@
-# -*- coding: utf-8 -*-
-
 # from plone import api
-from udala.aktak import _
 from plone.dexterity.interfaces import IDexterityContent
+from udala.aktak import _
+from udala.aktak import EXTRAORDINARY
+from udala.aktak import ORDINARY
 from zope.globalrequest import getRequest
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
-from udala.aktak import ORDINARY, EXTRAORDINARY
 
-
-class VocabItem(object):
+class VocabItem:
     def __init__(self, token, value):
         self.token = token
         self.value = value
 
 
 @implementer(IVocabularyFactory)
-class SessionTypes(object):
+class SessionTypes:
     """ """
 
     def __call__(self, context):
