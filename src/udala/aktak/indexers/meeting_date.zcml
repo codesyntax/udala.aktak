@@ -1,12 +1,12 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
   <adapter
-      factory=".bilkura_data.dummy"
+      factory=".meeting_date.dummy"
       name="bilkura_data"
       />
 
   <adapter
-      factory=".bilkura_data.bilkura_data"
+      factory=".meeting_date.meeting_date"
       name="bilkura_data"
       />
 

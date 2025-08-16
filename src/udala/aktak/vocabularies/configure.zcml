@@ -2,7 +2,7 @@
 
   <!-- -*- extra stuff goes here -*- -->
   <utility
-      name="udala.aktak.BilkuraMotak"
-      component=".bilkura_motak.BilkuraMotakFactory"
+      name="udala.aktak.SessionTypes"
+      component=".session_types.SessionTypesFactory"
       />
 </configure>

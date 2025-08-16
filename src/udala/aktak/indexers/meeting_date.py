@@ -12,6 +12,6 @@ def dummy(obj):
 
 
 @indexer(IBilkura)  # ADJUST THIS!
-def bilkura_data(obj):
+def meeting_date(obj):
     """Calculate and return the value for the indexer"""
     return obj.data

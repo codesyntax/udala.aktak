@@ -19,7 +19,7 @@ class VocabItem(object):
 
 
 @implementer(IVocabularyFactory)
-class BilkuraMotak(object):
+class SessionTypes(object):
     """ """
 
     def __call__(self, context):
@@ -48,4 +48,4 @@ class BilkuraMotak(object):
         return SimpleVocabulary(terms)
 
 
-BilkuraMotakFactory = BilkuraMotak()
+SessionTypesFactory = SessionTypes()

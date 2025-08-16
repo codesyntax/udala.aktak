@@ -23,7 +23,7 @@ class IBilkura(model.Schema):
 
     mota = schema.Choice(
         title=_("Type"),
-        vocabulary="udala.aktak.BilkuraMotak",
+        vocabulary="udala.aktak.SessionTypes",
         required=True,
     )
 
