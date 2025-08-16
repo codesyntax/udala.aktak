@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object name="portal_catalog">
-  <!-- Index
-  <index meta_type="FieldIndex"
-         name="industry"
-  >
-    <indexed_attr value="industry" />
-  </index>
--->
-  <!-- Metadata
-  <column value="industry" />
--->
-  <index meta_type="FieldIndex"
-         name="bilkura_data"
-  >
-    <indexed_attr value="bilkura_data" />
+  <index meta_type="FieldIndex" name="meeting_date" >
+    <indexed_attr value="meeting_date" />
   </index>
 </object>

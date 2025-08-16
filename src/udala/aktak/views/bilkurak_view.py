@@ -37,7 +37,7 @@ class BilkurakView(BrowserView):
                 bilkurak = api.content.find(
                     context=obj,
                     portal_type="Bilkura",
-                    sort_on="bilkura_data",
+                    sort_on="meeting_date",
                     sort_order="reverse",
                     depth=1,
                 )
@@ -76,7 +76,7 @@ class BilkurakView(BrowserView):
         bilkurak = api.content.find(
             context=context,
             portal_type="Bilkura",
-            sort_on="bilkura_data",
+            sort_on="meeting_date",
             sort_order="reverse",
             depth=1,
         )

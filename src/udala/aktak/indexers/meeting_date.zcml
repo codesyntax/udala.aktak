@@ -2,12 +2,12 @@
 
   <adapter
       factory=".meeting_date.dummy"
-      name="bilkura_data"
+      name="meeting_date"
       />
 
   <adapter
       factory=".meeting_date.meeting_date"
-      name="bilkura_data"
+      name="meeting_date"
       />
 
 </configure>
