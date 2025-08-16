@@ -8,11 +8,6 @@ from zope.interface import Interface
 from plone import api
 
 
-class IBilkurakView(Interface):
-    """Marker Interface for IBilkurakView"""
-
-
-@implementer(IBilkurakView)
 class BilkurakView(BrowserView):
     # If you want to define a template here, please remove the template from
     # the configure.zcml registration of this view.

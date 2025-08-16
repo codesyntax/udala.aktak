@@ -8,11 +8,6 @@ from zope.interface import Interface
 
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-class IBilkuraView(Interface):
-    """ Marker Interface for IBilkuraView"""
-
-
-@implementer(IBilkuraView)
 class BilkuraView(BrowserView):
     # If you want to define a template here, please remove the template from
     # the configure.zcml registration of this view.
