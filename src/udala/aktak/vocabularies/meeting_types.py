@@ -17,7 +17,7 @@ class VocabItem:
 
 
 @implementer(IVocabularyFactory)
-class SessionTypes:
+class MeetingTypes:
     """ """
 
     def __call__(self, context):
@@ -46,4 +46,4 @@ class SessionTypes:
         return SimpleVocabulary(terms)
 
 
-SessionTypesFactory = SessionTypes()
+MeetingTypesFactory = MeetingTypes()

@@ -3,7 +3,7 @@
   <permissions>
     <!-- -*- extra stuff goes here -*- -->
     <permission acquire="True"
-                name="udala.aktak: Add Bilkura"
+                name="udala.aktak: Add Meeting"
     >
       <role name="Manager" />
       <role name="Site Administrator" />

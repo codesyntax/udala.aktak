@@ -7,8 +7,8 @@
   <!-- -*- extra stuff goes here -*- -->
 
   <permission
-      id="udala.aktak.AddBilkura"
-      title="udala.aktak: Add Bilkura"
+      id="udala.aktak.AddMeeting"
+      title="udala.aktak: Add Meeting"
       />
 
 </configure>

@@ -7,7 +7,7 @@
 
   <browser:page
       name="view"
-      for="udala.aktak.content.bilkura.IBilkura"
+      for="udala.aktak.content.meeting.IMeeting"
       class=".meeting_view.MeetingView"
       template="meeting_view.pt"
       permission="zope2.View"
@@ -15,7 +15,7 @@
       />
 
   <browser:page
-      name="bilkurak-filter-view"
+      name="meetings-view-with-filters"
       for="plone.app.contenttypes.interfaces.IFolder"
       class=".meetings_view.MeetingsView"
       template="meetings_filters_view.pt"
@@ -26,7 +26,7 @@
       />
 
   <browser:page
-      name="bilkurak-aktak-bakarrik-filter-view"
+      name="meetings-view-with-filters-only-minutes"
       for="plone.app.contenttypes.interfaces.IFolder"
       class=".meetings_view.MeetingsView"
       template="meetings_filters_only_minutes_view.pt"
@@ -37,7 +37,7 @@
       />
 
   <browser:page
-      name="bilkurak-view"
+      name="meetings-view"
       for="plone.app.contenttypes.interfaces.IFolder"
       class=".meetings_view.MeetingsView"
       template="meetings_view.pt"
@@ -48,7 +48,7 @@
       />
 
   <browser:page
-      name="bilkurak-aktak-bakarrik-view"
+      name="meetings-view-only-minutes"
       for="plone.app.contenttypes.interfaces.IFolder"
       class=".meetings_view.MeetingsView"
       template="meetings_only_minutes_view.pt"

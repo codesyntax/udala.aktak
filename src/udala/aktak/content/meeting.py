@@ -7,53 +7,50 @@ from zope import schema
 from zope.interface import implementer
 
 
-class IBilkura(model.Schema):
-    """Marker interface and Dexterity Python Schema for Bilkura"""
+class IMeeting(model.Schema):
+    """Marker interface and Dexterity Python Schema for Meeting"""
 
-    # If you want, you can load a xml model created TTW here
-    # and customize it in Python:
-
-    # model.load('bilkura.xml')
-
-    data = schema.Datetime(
+    meeting_date = schema.Datetime(
         title=_("Date"),
         required=True,
     )
 
-    mota = schema.Choice(
+    meeting_type = schema.Choice(
         title=_("Type"),
-        vocabulary="udala.aktak.SessionTypes",
+        vocabulary="udala.aktak.MeetingTypes",
         required=True,
     )
 
-    gaizerrenda = NamedBlobFile(
+    meeting_agenda = NamedBlobFile(
         title="File with the agenda of the meeting", required=False
     )
 
-    akta = NamedBlobFile(title=_("File with the meeting minutes"), required=False)
+    meeting_minutes = NamedBlobFile(
+        title=_("File with the meeting minutes"), required=False
+    )
 
-    eranskinak = NamedBlobFile(
+    meeting_minutes_annexes = NamedBlobFile(
         title=_("File with the annexes to the meeting minutes"), required=False
     )
 
-    bideoa = schema.TextLine(
+    video_url = schema.TextLine(
         title=_("URL of the video"),
         required=False,
     )
 
-    bideoakta = schema.TextLine(
+    video_minutes_url = schema.TextLine(
         title=_("URL of the meeting minutes video"),
         required=False,
     )
 
 
-@implementer(IBilkura)
-class Bilkura(Container):
-    """Content-type class for IBilkura"""
+@implementer(IMeeting)
+class Meeting(Container):
+    """Content-type class for IMeeting"""
 
-    def get_session_title(self):
+    def get_meeting_type_title(self):
         return vocab_term_title(
             self,
-            "udala.aktak.SessionTypes",
-            self.mota,
+            "udala.aktak.MeetingTypes",
+            self.meeting_type,
         )

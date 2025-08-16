@@ -2,7 +2,7 @@
 
   <!-- -*- extra stuff goes here -*- -->
   <utility
-      name="udala.aktak.SessionTypes"
-      component=".session_types.SessionTypesFactory"
+      name="udala.aktak.MeetingTypes"
+      component=".meeting_types.MeetingTypesFactory"
       />
 </configure>

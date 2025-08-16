@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
         meta_type="Dexterity FTI"
-        name="Bilkura"
+        name="Meeting"
         i18n:domain="udala.aktak"
 >
 
@@ -14,7 +14,7 @@
   />
 
   <property name="allow_discussion">False</property>
-  <property name="factory">Bilkura</property>
+  <property name="factory">Meeting</property>
   <property name="icon_expr">string:contenttype/document</property>
   <property name="link_target" />
 
@@ -28,11 +28,11 @@
   -->
   </property>
   <!-- Schema, class and security -->
-  <property name="add_permission">udala.aktak.AddBilkura</property>
-  <property name="klass">udala.aktak.content.bilkura.Bilkura</property>
+  <property name="add_permission">udala.aktak.AddMeeting</property>
+  <property name="klass">udala.aktak.content.meeting.Meeting</property>
   <property name="model_file" />
   <property name="model_source" />
-  <property name="schema">udala.aktak.content.bilkura.IBilkura</property>
+  <property name="schema">udala.aktak.content.meeting.IMeeting</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors"
@@ -63,7 +63,7 @@
   </property>
 
   <!-- View information -->
-  <property name="add_view_expr">string:${folder_url}/++add++Bilkura</property>
+  <property name="add_view_expr">string:${folder_url}/++add++Meeting</property>
   <property name="default_view">view</property>
   <property name="default_view_fallback">False</property>
   <property name="immediate_view">view</property>

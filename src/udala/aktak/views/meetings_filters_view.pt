@@ -79,15 +79,15 @@
                                 item python:brain.getObject();
                                 item_url item/absolute_url;
                               ">
-                      <td tal:content="python:toLocalizedTime(item.data)">
+                      <td tal:content="python:toLocalizedTime(item.meeting_date)">
                         2022/04/04 19:00
                       </td>
-                      <td tal:content="item/get_session_title">Ordinary</td>
+                      <td tal:content="item/get_meeting_type_title">Ordinary</td>
                       <td>
-                        <tal:block tal:condition="item/gaizerrenda">
+                        <tal:block tal:condition="item/meeting_agenda">
                           <a href=""
                              tal:attributes="
-                               href string:${item_url}/@@download/gaizerrenda;
+                               href string:${item_url}/@@download/meeting_agenda;
                              "
                              i18n:translate=""
                           >
@@ -96,10 +96,10 @@
                         </tal:block>
                       </td>
                       <td>
-                        <tal:block tal:condition="item/akta">
+                        <tal:block tal:condition="item/meeting_minutes">
                           <a href=""
                              tal:attributes="
-                               href string:${item_url}/@@download/akta;
+                               href string:${item_url}/@@download/meeting_minutes;
                              "
                              i18n:translate=""
                           >
@@ -108,10 +108,10 @@
                         </tal:block>
                       </td>
                       <td>
-                        <tal:block tal:condition="item/eranskinak">
+                        <tal:block tal:condition="item/meeting_minutes_annexes">
                           <a href=""
                              tal:attributes="
-                               href string:${item_url}/@@download/eranskinak;
+                               href string:${item_url}/@@download/meeting_minutes_annexes;
                              "
                              i18n:translate=""
                           >
@@ -120,11 +120,11 @@
                         </tal:block>
                       </td>
                       <td>
-                        <a class="bideoa"
+                        <a class="video"
                            href=""
-                           tal:condition="item/bideoa"
+                           tal:condition="item/video_url"
                            tal:attributes="
-                             href item/bideoa;
+                             href item/video_url;
                            "
                            i18n:translate=""
                         >
@@ -132,11 +132,11 @@
                         </a>
                       </td>
                       <td>
-                        <a class="bideoa bideoakta"
+                        <a class="video video-minutes"
                            href=""
-                           tal:condition="item/bideoakta"
+                           tal:condition="item/video_minutes_url"
                            tal:attributes="
-                             href item/bideoakta;
+                             href item/video_minutes_url;
                            "
                            i18n:translate=""
                         >

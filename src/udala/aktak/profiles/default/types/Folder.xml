@@ -9,10 +9,10 @@
   <property name="view_methods"
             purge="false"
   >
-    <element value="bilkurak-filter-view" />
-    <element value="bilkurak-view" />
-    <element value="bilkurak-aktak-bakarrik-filter-view" />
-    <element value="bilkurak-aktak-bakarrik-view" />
+    <element value="meetings-view-with-filters" />
+    <element value="meetings-view-with-filters-only-minutes" />
+    <element value="meetings-view" />
+    <element value="meetings-view-only-minutes" />
   </property>
 
 
