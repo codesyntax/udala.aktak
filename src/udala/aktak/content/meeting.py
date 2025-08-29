@@ -6,6 +6,8 @@ from udala.aktak.views.vocabutils import vocab_term_title
 from zope import schema
 from zope.interface import implementer
 
+from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
+from zope.interface import alsoProvides
 
 class IMeeting(model.Schema):
     """Marker interface and Dexterity Python Schema for Meeting"""
@@ -43,7 +45,13 @@ class IMeeting(model.Schema):
         required=False,
     )
 
-
+alsoProvides(IMeeting["meeting_date"], ILanguageIndependentField)
+alsoProvides(IMeeting["meeting_type"], ILanguageIndependentField)
+alsoProvides(IMeeting["meeting_agenda"], ILanguageIndependentField)
+alsoProvides(IMeeting["meeting_minutes"], ILanguageIndependentField)
+alsoProvides(IMeeting["meeting_minutes_annexes"], ILanguageIndependentField)
+alsoProvides(IMeeting["video_url"], ILanguageIndependentField)
+alsoProvides(IMeeting["video_minutes_url"], ILanguageIndependentField)
 @implementer(IMeeting)
 class Meeting(Container):
     """Content-type class for IMeeting"""
