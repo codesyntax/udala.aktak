@@ -2,6 +2,10 @@
 <object meta_type="Plone Types Tool"
         name="portal_types"
 >
-  <object meta_type="Dexterity FTI" name="Meeting" />
-  <object meta_type="Dexterity FTI" name="Folder" />
+  <object meta_type="Dexterity FTI"
+          name="Meeting"
+  />
+  <object meta_type="Dexterity FTI"
+          name="Folder"
+  />
 </object>
