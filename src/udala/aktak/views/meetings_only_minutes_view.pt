@@ -14,67 +14,76 @@
         <tal:contents tal:define="
                         items context/@@contentlisting;
                         toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                        icons python:context.restrictedTraverse('@@iconresolver');
                       ">
-          <div class="table-responsive"
+          <div class="card shadow-sm border-0 mb-4"
                tal:condition="items"
           >
+            <div class="table-responsive m-0">
 
-            <table class="listing table"
-                   id="meetings"
-            >
-              <thead>
-                <tr>
-                  <th i18n:translate="">Date</th>
-                  <th i18n:translate="">Type</th>
-                  <th i18n:translate="">Meeting minutes</th>
-                  <th i18n:translate="">Annexes to the meeting minutes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr tal:repeat="brain items">
-                  <tal:item define="
-                              item python:brain.getObject();
-                              item_url item/absolute_url;
-                            ">
-                    <td tal:content="python:toLocalizedTime(item.meeting_date)">
-                      2022/04/04 19:00
-                    </td>
-                    <td tal:content="item/get_meeting_type_title">Ordinary</td>
-                    <td>
-                      <tal:block tal:condition="item/meeting_minutes">
-                        <a href=""
-                           tal:attributes="
-                             href string:${item_url}/@@download/meeting_minutes;
-                           "
-                           i18n:translate=""
-                        >
-                        Download
-                        </a>
-                      </tal:block>
-                    </td>
-                    <td>
-                      <tal:block tal:condition="item/meeting_minutes_annexes">
-                        <a href=""
-                           tal:attributes="
-                             href string:${item_url}/@@download/meeting_minutes_annexes;
-                           "
-                           i18n:translate=""
-                        >
-                        Download
-                        </a>
-                      </tal:block>
-                    </td>
-                  </tal:item>
-                </tr>
-              </tbody>
-            </table>
+              <table class="table table-hover table-striped mb-0 align-middle"
+                     id="meetings"
+              >
+                <thead class="table-light text-secondary">
+                  <tr>
+                    <th i18n:translate="" class="fw-semibold border-bottom-0 py-3 ps-4">Date</th>
+                    <th i18n:translate="" class="fw-semibold border-bottom-0 py-3">Type</th>
+                    <th i18n:translate="" class="fw-semibold border-bottom-0 py-3">Meeting minutes</th>
+                    <th i18n:translate="" class="fw-semibold border-bottom-0 py-3 pe-4">Annexes to the meeting minutes</th>
+                  </tr>
+                </thead>
+                <tbody class="border-top-0">
+                  <tr tal:repeat="brain items">
+                    <tal:item define="
+                                item python:brain.getObject();
+                                item_url item/absolute_url;
+                              ">
+                      <td class="ps-4 fw-medium text-dark" tal:content="python:toLocalizedTime(item.meeting_date)">
+                        2022/04/04 19:00
+                      </td>
+                      <td class="text-secondary" tal:content="item/get_meeting_type_title">Ordinary</td>
+                      <td>
+                        <tal:block tal:condition="item/meeting_minutes">
+                          <a class="btn btn-sm btn-outline-primary d-inline-flex align-items-center gap-1 rounded-pill px-3"
+                             tal:attributes="
+                               href string:${item_url}/@@download/meeting_minutes;
+                             "
+                             title="Download"
+                             i18n:attributes="title"
+                          >
+                            <span class="d-flex align-items-center" tal:content="structure python:icons.tag('download')"></span>
+                            <span i18n:translate="">Download</span>
+                          </a>
+                        </tal:block>
+                      </td>
+                      <td class="pe-4">
+                        <tal:block tal:condition="item/meeting_minutes_annexes">
+                          <a class="btn btn-sm btn-outline-primary d-inline-flex align-items-center gap-1 rounded-pill px-3"
+                             tal:attributes="
+                               href string:${item_url}/@@download/meeting_minutes_annexes;
+                             "
+                             title="Download"
+                             i18n:attributes="title"
+                          >
+                            <span class="d-flex align-items-center" tal:content="structure python:icons.tag('download')"></span>
+                            <span i18n:translate="">Download</span>
+                          </a>
+                        </tal:block>
+                      </td>
+                    </tal:item>
+                  </tr>
+                </tbody>
+              </table>
 
+            </div>
           </div>
-          <p tal:condition="not:items"
-             i18n:translate=""
+          
+          <div class="alert alert-info d-flex align-items-center shadow-sm my-4"
+               tal:condition="not:items"
           >
-          There is no data
-          </p>
+             <span class="fs-4 me-3 d-flex align-items-center text-info" tal:content="structure python:icons.tag('info-circle')"></span>
+             <p class="mb-0" i18n:translate="">There is no data</p>
+          </div>
         </tal:contents>
 
       </metal:block>
