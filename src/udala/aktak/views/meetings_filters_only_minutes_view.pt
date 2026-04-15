@@ -36,9 +36,12 @@
             });
             </script>
           </div>
-          
+
           <div class="mb-4 col-md-4 col-lg-3">
-            <label for="folder-change" class="form-label text-secondary fw-medium small mb-1" i18n:translate="">Filter by year</label>
+            <label class="form-label text-secondary fw-medium small mb-1"
+                   for="folder-change"
+                   i18n:translate=""
+            >Filter by year</label>
             <select class="form-select shadow-sm"
                     id="folder-change"
             >
@@ -66,10 +69,18 @@
                 >
                   <thead class="table-light text-secondary">
                     <tr>
-                      <th i18n:translate="" class="fw-semibold border-bottom-0 py-3 ps-4">Date</th>
-                      <th i18n:translate="" class="fw-semibold border-bottom-0 py-3">Type</th>
-                      <th i18n:translate="" class="fw-semibold border-bottom-0 py-3">Meeting minutes</th>
-                      <th i18n:translate="" class="fw-semibold border-bottom-0 py-3 pe-4">Annexes to the meeting minutes</th>
+                      <th class="fw-semibold border-bottom-0 py-3 ps-4"
+                          i18n:translate=""
+                      >Date</th>
+                      <th class="fw-semibold border-bottom-0 py-3"
+                          i18n:translate=""
+                      >Type</th>
+                      <th class="fw-semibold border-bottom-0 py-3"
+                          i18n:translate=""
+                      >Meeting minutes</th>
+                      <th class="fw-semibold border-bottom-0 py-3 pe-4"
+                          i18n:translate=""
+                      >Annexes to the meeting minutes</th>
                     </tr>
                   </thead>
                   <tbody class="border-top-0">
@@ -82,20 +93,26 @@
                                   item python:brain.getObject();
                                   item_url item/absolute_url;
                                 ">
-                        <td class="ps-4 fw-medium text-dark" tal:content="python:toLocalizedTime(item.meeting_date)">
+                        <td class="ps-4 fw-medium text-dark"
+                            tal:content="python:toLocalizedTime(item.meeting_date)"
+                        >
                           2022/04/04 19:00
                         </td>
-                        <td class="text-secondary" tal:content="item/get_meeting_type_title">Ordinary</td>
+                        <td class="text-secondary"
+                            tal:content="item/get_meeting_type_title"
+                        >Ordinary</td>
                         <td>
                           <tal:block tal:condition="item/meeting_minutes">
                             <a class="btn btn-sm btn-outline-primary d-inline-flex align-items-center gap-1 rounded-pill px-3"
+                               title="Download"
                                tal:attributes="
                                  href string:${item_url}/@@download/meeting_minutes;
                                "
-                               title="Download"
                                i18n:attributes="title"
                             >
-                              <span class="d-flex align-items-center" tal:content="structure python:icons.tag('download')"></span>
+                              <span class="d-flex align-items-center"
+                                    tal:content="structure python:icons.tag('download')"
+                              ></span>
                               <span i18n:translate="">Download</span>
                             </a>
                           </tal:block>
@@ -103,13 +120,15 @@
                         <td class="pe-4">
                           <tal:block tal:condition="item/meeting_minutes_annexes">
                             <a class="btn btn-sm btn-outline-primary d-inline-flex align-items-center gap-1 rounded-pill px-3"
+                               title="Download"
                                tal:attributes="
                                  href string:${item_url}/@@download/meeting_minutes_annexes;
                                "
-                               title="Download"
                                i18n:attributes="title"
                             >
-                              <span class="d-flex align-items-center" tal:content="structure python:icons.tag('download')"></span>
+                              <span class="d-flex align-items-center"
+                                    tal:content="structure python:icons.tag('download')"
+                              ></span>
                               <span i18n:translate="">Download</span>
                             </a>
                           </tal:block>
@@ -121,12 +140,16 @@
               </div>
             </div>
           </tal:repeat>
-          
+
           <div class="alert alert-info d-flex align-items-center shadow-sm my-4"
                tal:condition="not:folders"
           >
-             <span class="fs-4 me-3 d-flex align-items-center text-info" tal:content="structure python:icons.tag('info-circle')"></span>
-             <p class="mb-0" i18n:translate="">There is no data</p>
+            <span class="fs-4 me-3 d-flex align-items-center text-info"
+                  tal:content="structure python:icons.tag('info-circle')"
+            ></span>
+            <p class="mb-0"
+               i18n:translate=""
+            >There is no data</p>
           </div>
         </tal:contents>
 

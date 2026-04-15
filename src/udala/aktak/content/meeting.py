@@ -1,3 +1,4 @@
+from plone.app.dexterity import textindexer
 from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
 from plone.dexterity.content import Container
 from plone.namedfile.field import NamedBlobFile
@@ -7,7 +8,7 @@ from udala.aktak.views.vocabutils import vocab_term_title
 from zope import schema
 from zope.interface import alsoProvides
 from zope.interface import implementer
-from plone.app.dexterity import textindexer
+
 
 class IMeeting(model.Schema):
     """Marker interface and Dexterity Python Schema for Meeting"""
@@ -23,7 +24,7 @@ class IMeeting(model.Schema):
         required=True,
     )
 
-    textindexer.searchable('meeting_agenda')
+    textindexer.searchable("meeting_agenda")
     meeting_agenda = NamedBlobFile(
         title="File with the agenda of the meeting", required=False
     )
