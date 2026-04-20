@@ -22,8 +22,8 @@ A Plone addon providing specific functionality for UdalPlone projects.
 
 ## Features
 
-- Custom content types and views specific to udala.aktak
-- RestAPI endpoints
+- Provides the `Meeting` content type
+- RestAPI endpoints for meeting data
 - Volto-ready backend setup
 
 ## Installation
